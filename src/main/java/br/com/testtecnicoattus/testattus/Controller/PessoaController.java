@@ -13,10 +13,11 @@ import br.com.testtecnicoattus.testattus.Dto.PessoaDTO;
 import br.com.testtecnicoattus.testattus.entity.Pessoa;
 import br.com.testtecnicoattus.testattus.services.AdicionaNovaPessoa;
 import br.com.testtecnicoattus.testattus.services.AlteraPessoaExistente;
+import br.com.testtecnicoattus.testattus.services.EncontraPessoa;
 import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-
 
 @Controller
 @RequestMapping("/pessoa")
@@ -30,6 +31,9 @@ public class PessoaController {
 	@Autowired
 	AlteraPessoaExistente alteraPessoaExistente;
 	
+	@Autowired
+	EncontraPessoa encontraPessoa;
+	
 	@PostMapping("/adicionaPessoa")	
 	public ResponseEntity<Pessoa> adicionarPessoa(@RequestBody @Valid List<PessoaDTO> pessoaDTO) throws Exception{
 		adicionaNovaPessoa.adicionaNovaPessoa(pessoaDTO);		
@@ -41,6 +45,20 @@ public class PessoaController {
 		alteraPessoaExistente.alteraPessoa(id, pessoaDto);
 		return ResponseEntity.ok().build();
 	}
+	
+	@GetMapping("/encontraPessoa/{id}")
+	public ResponseEntity<Pessoa> encontrPesso(@RequestParam Integer id) {
+		return ResponseEntity.ok().body(encontraPessoa.encontrarPessoa(id));
+	}
+	
+	@GetMapping("/encontraPessoaNome/")
+	public ResponseEntity<List<Pessoa>> encontrPessoPorNome(@RequestParam String nome)  {
+		return ResponseEntity.ok().body(encontraPessoa.encontrarPorNome(nome));
+	}
+	
+	
+	
+	
 	
 	
 
