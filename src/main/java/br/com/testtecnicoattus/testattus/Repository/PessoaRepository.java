@@ -17,4 +17,10 @@ public interface PessoaRepository extends JpaRepository<Pessoa, Integer>{
 	
 	Boolean existsByNomeContaining(String nome);
 
+	
+	 List<Pessoa> findAll();
+		
+		
+
+	
 }

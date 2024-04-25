@@ -44,6 +44,11 @@ public class EncontraPessoa {
 		throw new NotFound("Não há usuários cadastrados com o nome fornecido");
 		
 	}
+	
+	public List<Pessoa> listarPessoas(){
+		return repository.findAll();	
+	}
+	
 		
 		
 	

@@ -56,6 +56,11 @@ public class PessoaController {
 		return ResponseEntity.ok().body(encontraPessoa.encontrarPorNome(nome));
 	}
 	
+	@GetMapping("/listarPessoa/")
+	public ResponseEntity<List<Pessoa>> listarPessoas() {
+		return ResponseEntity.ok().body(encontraPessoa.listarPessoas());
+	}
+	
 	
 	
 	
