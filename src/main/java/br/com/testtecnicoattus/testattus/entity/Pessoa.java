@@ -23,6 +23,11 @@ import lombok.Setter;
 public class Pessoa implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
+	
+	public Pessoa(String nome,String dataNascimento) {
+		this.nome = nome;
+		this.dataNascimento = dataNascimento;	
+	}
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
@@ -36,8 +41,6 @@ public class Pessoa implements Serializable{
 	@Column(name = "dataNascimento",nullable = false)
 	private String dataNascimento;
 	
-	
-	
-}
+	}
 
 

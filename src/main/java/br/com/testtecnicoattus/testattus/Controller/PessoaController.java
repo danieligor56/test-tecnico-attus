@@ -17,7 +17,7 @@ import br.com.testtecnicoattus.testattus.services.EncontraPessoa;
 import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
+
 
 @Controller
 @RequestMapping("/pessoa")
