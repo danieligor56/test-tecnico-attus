@@ -1,4 +1,4 @@
-package br.com.testtecnicoattus.testattus.entity;
+package br.com.testtecnicoattus.testattus.Entity;
 
 import java.io.Serializable;
 import jakarta.persistence.Column;

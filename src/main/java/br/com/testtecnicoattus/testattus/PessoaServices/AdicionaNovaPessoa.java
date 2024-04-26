@@ -1,4 +1,4 @@
-package br.com.testtecnicoattus.testattus.services;
+package br.com.testtecnicoattus.testattus.PessoaServices;
 
 import java.util.List;
 import org.apache.coyote.BadRequestException;
@@ -6,8 +6,8 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import br.com.testtecnicoattus.testattus.Dto.PessoaDTO;
+import br.com.testtecnicoattus.testattus.Entity.Pessoa;
 import br.com.testtecnicoattus.testattus.Repository.PessoaRepository;
-import br.com.testtecnicoattus.testattus.entity.Pessoa;
 
 @Service
 public class AdicionaNovaPessoa {

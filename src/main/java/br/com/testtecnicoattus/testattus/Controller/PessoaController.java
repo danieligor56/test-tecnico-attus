@@ -1,23 +1,23 @@
 package br.com.testtecnicoattus.testattus.Controller;
 
 import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import br.com.testtecnicoattus.testattus.Dto.PessoaDTO;
-import br.com.testtecnicoattus.testattus.entity.Pessoa;
-import br.com.testtecnicoattus.testattus.services.AdicionaNovaPessoa;
-import br.com.testtecnicoattus.testattus.services.AlteraPessoaExistente;
-import br.com.testtecnicoattus.testattus.services.EncontraPessoa;
+import br.com.testtecnicoattus.testattus.Entity.Pessoa;
+import br.com.testtecnicoattus.testattus.PessoaServices.AdicionaNovaPessoa;
+import br.com.testtecnicoattus.testattus.PessoaServices.AlteraPessoaExistente;
+import br.com.testtecnicoattus.testattus.PessoaServices.EncontraPessoa;
 import jakarta.validation.Valid;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-
 
 @Controller
 @RequestMapping("/pessoa")

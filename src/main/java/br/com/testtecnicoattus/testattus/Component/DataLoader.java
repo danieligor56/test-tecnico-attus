@@ -2,8 +2,9 @@ package br.com.testtecnicoattus.testattus.Component;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
+import br.com.testtecnicoattus.testattus.Entity.Pessoa;
 import br.com.testtecnicoattus.testattus.Repository.PessoaRepository;
-import br.com.testtecnicoattus.testattus.entity.Pessoa;
 import jakarta.annotation.PostConstruct;
 
 @Component
