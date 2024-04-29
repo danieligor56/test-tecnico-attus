@@ -1,9 +1,6 @@
 package br.com.testtecnicoattus.testattus.EnderecoServices;
 
 import java.util.List;
-
-import javax.naming.directory.InvalidSearchControlsException;
-
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,7 +8,6 @@ import br.com.testtecnicoattus.testattus.Dto.EnderecoDTO;
 import br.com.testtecnicoattus.testattus.Entity.Endereco;
 import br.com.testtecnicoattus.testattus.Repository.EnderecoRepository;
 import exception.BadRequest;
-import exception.NotFound;
 
 @Service
 public class AlteraEndereco {
