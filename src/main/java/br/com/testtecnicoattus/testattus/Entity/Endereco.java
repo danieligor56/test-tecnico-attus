@@ -23,19 +23,31 @@ import lombok.Setter;
 
 public class Endereco {
 	
+	public Endereco(String logradouro, String cep, String numero, String cidade, String estado, TipoEndereco tipoEndereco,
+			Pessoa pessoa) {
+
+		this.logradouro = logradouro;
+		this.cep = cep;
+		this.numero = numero;
+		this.cidade = cidade;
+		this.estado = estado;
+		this.tipoEndereco = tipoEndereco;
+		this.pessoa = pessoa;
+	}
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
-	private Long id;
+	private Integer id;
 	
 	@Column(name = "logradouro",nullable = false)
 	private String logradouro;
 	
 	@Column(name = "cep",nullable = false)
-	private Long cep;
+	private String cep;
 	
 	@Column(name = "numeroEndereco",nullable = false)
-	private Long numero;
+	private String numero;
 	
 	@Column(name = "cidade",nullable = false)
 	private String cidade;

@@ -16,9 +16,9 @@ public class EnderecoDTO {
 	
 	private String logradouro;
 	
-	private Long cep;
+	private String cep;
 	
-	private Long numero;
+	private String numero;
 	
 	private String cidade;
 	

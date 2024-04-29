@@ -1,24 +1,20 @@
 package br.com.testtecnicoattus.testattus.Repository;
 
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
-
-import br.com.testtecnicoattus.testattus.Dto.EnderecoDTO;
-import br.com.testtecnicoattus.testattus.Entity.Endereco;
 import java.util.List;
 
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+import br.com.testtecnicoattus.testattus.Entity.Endereco;
 
 @Repository
 public interface EnderecoRepository extends JpaRepository<Endereco, Integer>{
-
-	/*
-	 * Endereco findByLogradouroAndCepAndNumeroAndCidadeAndEstado( String
-	 * logradouro, Long cep, Long numero, String cidade, String estado);
-	 */
-	
 	
 	Boolean existsByLogradouroAndCepAndNumeroAndCidadeAndEstado(String
-	  logradouro, Long cep, Long numero, String cidade, String estado);
+	  logradouro, String cep, String numero, String cidade, String estado);
+	
+	List<Endereco> findByPessoaId(Integer pessoa);
+	
+	Endereco findEnderecoById(Integer id);
 	 
 	
 	
