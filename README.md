@@ -29,7 +29,7 @@ Pré-requisitos: Java 17
 
 ```bash
 # clonar repositório
-git clone https://github.com/devsuperior/sds1-wmazoni
+git clone https://github.com/danieligor56/test-tecnico-attus.git
 
 # entrar na pasta do projeto back end
 cd backend
