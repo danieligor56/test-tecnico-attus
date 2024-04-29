@@ -42,7 +42,7 @@ cd backend
 
 # Autor
 
-Daniel Igor de 
+Daniel Vale
 
-https://www.linkedin.com/in/wmazoni
+https://github.com/danieligor56
 
